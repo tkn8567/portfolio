@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/header/header'
-import Main_visual from '../components/main_visual/main_visual'
-import Intro from '../components/intro/intro'
-import Footer from '../components/footer/footer'
+import Header from '../src/1header'
+import Main_visual from '../src/2main_visual'
+import Intro from '../src/3intro'
+import Footer from '../src/99footer'
 
 const Home: NextPage = () => {
   return (

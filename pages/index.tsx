@@ -1,17 +1,21 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Header from '../components/header/header'
+import Main_visual from '../components/main_visual/main_visual'
+import Intro from '../components/intro/intro'
+import Footer from '../components/footer/footer'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-      </h1>
+      <Header/>
+      <Main_visual/>
+      <Intro/>
+      <Footer/>
     </div>
   )
 }

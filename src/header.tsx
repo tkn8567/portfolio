@@ -2,9 +2,10 @@ import Link from 'next/link'
 const Header= () => {
     return (
     <div className='fixed w-full'>
-        <div className='backdrop-blur-sm z-10 flex flex-row items-center h-16'>
+        <div className='backdrop-blur-lg z-10 flex flex-row items-center h-16'>
+            <Link href='/'><div className='text-white font-bold underline text-lg m-3 ml-7'>#COFFEE</div></Link>
+            
 
-            <div className='text-white font-bold underline text-lg m-3 ml-7'>#COFFEE</div>
 
             <Link href="/login"><div className='text-white text-lg font-thin px-3 m-3'>Owner Page</div></Link>
             
@@ -14,7 +15,7 @@ const Header= () => {
                 </svg>
                 <div className="text-white font-thin ml-2">search</div>
             </div>
-            
+
         </div>
     </div>
     

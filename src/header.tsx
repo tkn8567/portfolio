@@ -1,12 +1,10 @@
 import Link from 'next/link'
 const Header= () => {
     return (
-    <div className='fixed w-full'>
-        <div className='backdrop-blur-lg z-10 flex flex-row items-center h-16'>
+    <header className='fixed w-full z-50'>
+        <div className='backdrop-blur-lg flex flex-row items-center h-16'>
             <Link href='/'><div className='text-white font-bold underline text-lg m-3 ml-7'>#COFFEE</div></Link>
             
-
-
             <Link href="/login"><div className='text-white text-lg font-thin px-3 m-3'>Owner Page</div></Link>
             
             <div className="border rounded w-3/12 h-8 m-3 items-center flex flex-row">
@@ -17,7 +15,7 @@ const Header= () => {
             </div>
 
         </div>
-    </div>
+    </header>
     
     )
 }

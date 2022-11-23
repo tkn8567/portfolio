@@ -6,17 +6,36 @@ const Main= () => {
             text: 'お値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリ',
             date: '1999年4月12日'
         },
-
-
-        {id: 2, topic: 'コーヒードリッパー', title: '', text: '', date: ''},
-        {id: 3, topic: 'コーヒーメーカー', title: '', text: '', date: ''},
-        {id: 4, topic: 'コーヒーカップ', title: '', text: '', date: ''},
-        {id: 5, topic: 'コーヒーをいれよう', title: '', text: '', date: ''},
-        {id: 6, topic: 'コーヒー通販', title: '', text: '', date: ''}
+        {topic: 'コーヒードリッパー', title: '', text: '', date: ''},
+        {topic: 'コーヒーメーカー', title: '', text: '', date: ''},
+        {topic: 'コーヒーカップ', title: '', text: '', date: ''},
+        {topic: 'コーヒーをいれよう', title: '', text: '', date: ''},
+        {topic: 'コーヒー通販', title: '', text: '', date: ''}
     ];
     return (
     <>
     <div className="pt-20"></div>
+    <div className='max-w-4xl m-auto'>
+        <div className='font-def text-white'>className='font-def' for japanese<br/>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
+            abcdefghijklmnopqrstuvwxyz<br/>
+            1234567890<br/>
+            あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん<br/>
+        </div>
+        <div className='font-jost text-white mt-4'>className='font-jost'<br/>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
+            abcdefghijklmnopqrstuvwxyz<br/>
+            1234567890<br/>
+            あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん<br/>
+        </div>
+        <div className='font-dance text-white mt-4'>className='font-dance'<br/>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
+            abcdefghijklmnopqrstuvwxyz<br/>
+            1234567890<br/>
+            あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん<br/>
+        </div>
+    </div>
+    
     <div className='max-w-4xl m-auto'>
         <div className='text-white font-thin border-b-2 w-16 sticky top-20 z-40'>Recent</div>
         <div className="flex flex-wrap justify-around">
@@ -30,7 +49,14 @@ const Main= () => {
                             {content.topic}
                         </div>
                         <img className='object-cover w-full h-40' src="./coffee.jpg" alt="blueberry"/>
-                        <div className='my-2 text-'></div>
+                        <div className='my-3 font-semibold'>{content.title}</div>
+                        <div className='my-2 leading-5 tracking-wide text-[12px] '>{content.text}</div>
+                        <div className='flex flex-row items-center text-[#5C5C5C]'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div className='text-xs'>{content.date}</div>
+                        </div>
                     </div>
                 );
             })}

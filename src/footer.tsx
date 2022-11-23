@@ -13,7 +13,7 @@ const Footer= () => {
                     20年以上も飲めなかったコーヒーが飲めるようになったら、大学留年して、大家に追い出されて、野宿にハマってしまった。人生何が起こるかわからないね。
                 </div>
             </div>
-            <div className='text-neutral-500 font-thin text-center mt-7'>
+            <div className='text-neutral-500 font-thin font-jost text-center mt-7'>
                 &copy; 2022 Noland. All Rights Reserved.
             </div>
         </div>

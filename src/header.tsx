@@ -1,11 +1,15 @@
 import Link from 'next/link'
+import LoginModal from './loginmodal'
+import SearchModal from './searchmodal'
 const Header= () => {
     return (
     <header className='fixed w-full z-50'>
         <div className='backdrop-blur-lg flex flex-row items-center h-16'>
-            <Link href='/'><div className='text-white font-bold underline text-lg m-3 ml-7'>#COFFEE</div></Link>
+            <Link href='/'><div className='font-dance text-white font-bold underline text-lg m-3 ml-7'>#coffee</div></Link>
             
-            <Link href="/login"><div className='text-white text-lg font-thin px-3 m-3'>Owner Page</div></Link>
+            <LoginModal />
+
+            <SearchModal　/>
             
             <div className="border rounded w-3/12 h-8 m-3 items-center flex flex-row">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 m-1 ml-2 text-white">

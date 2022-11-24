@@ -4,11 +4,10 @@ import SearchModal from './searchmodal'
 const Header= () => {
     return (
     <header className='flex flex-row justify-between pt-4 max-w-4xl m-auto'>
-        <div className="h-24 p-4 border-r-[.1rem] border-[#282828]
+        <div className="h-24 p-4 pb-3 border-r-[.1rem] border-[#282828]
                         flex justify-end items-end">
-            <Link className='flex flex-row ' href='/'>
-                <div className="font-lust text-[#c09b37ce] text-2xl">hibiki</div>
-                <div className='font-lust text-2xl top-12 left-40'>.blog</div>
+            <Link href='/'>
+                <div className="font-uro text-[#c09b37ce] text-4xl px-4">洞</div>
             </Link>
         </div>
         <div className="flex flex-row">

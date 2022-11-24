@@ -8,12 +8,12 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>洞｜Hibiki's CoffeeBlog</title>
+        <link rel="icon" href="/coffee.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
-      <div className='font-def text-[#282828]'>
-        <Header/>
+      <div className='font-jap text-[#282828]'>
+        <Header />
         <Main/>
         <Footer/>
       </div>

@@ -3,8 +3,8 @@
 const Footer= () => {
     return (
     <footer className='mt-20'>
-        <div className="max-w-xl m-auto">
-            <div className="flex flex-wrap justify-between">
+        <div className="max-w-4xl m-auto">
+            <div className="flex flex-wrap justify-center">
                 <div className="w-72 flex justify-center">
                     <img className='object-cover w-[15rem] rounded-full' src="./coffee.jpg" alt="blueberry"/>
                 </div>

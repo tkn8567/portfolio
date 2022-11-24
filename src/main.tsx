@@ -24,7 +24,7 @@ const Main= () => {
     <div className="flex flex-col items-center w-screen">
         <div className="m-8">
             <div className='w-[24rem] h-[14rem] grayscale hover:grayscale-0 duration-700'>
-                <img src='./coffee_image/img_04.jpg' alt='main_visual' />
+                <img className='pointer-events-none' src='./coffee_image/img_04.jpg' alt='main_visual' />
             </div>
             <div className='flex flex-row gap-1'>
                 <div className='w-14 h-0 mt-4 border-[.01rem] border-[#282828]'></div>

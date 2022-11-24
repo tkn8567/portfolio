@@ -6,7 +6,7 @@ const Footer= () => {
         <div className="max-w-4xl m-auto">
             <div className="flex flex-wrap justify-center">
                 <div className="w-72 flex justify-center">
-                    <img className='object-cover w-[15rem] rounded-full' src="./hibiki_image/hibiki_01.jpg" alt="blueberry"/>
+                    <img className='object-cover w-[15rem] rounded-full' src="/hibiki_image/hibiki_01.jpg" alt="blueberry"/>
                 </div>
                 <div className="w-72 text-left text-[#282828] flex flex-col justify-center">
                     <div className='text-4xl font-lust'>Hibiki</div>

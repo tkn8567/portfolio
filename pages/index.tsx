@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>洞｜Hibiki's CoffeeBlog</title>
-        <link rel="icon" href="/coffee.jpg" />
+        <link rel="icon" href="/hibiki_image/hibiki_01.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <div className='font-jap text-[#282828]'>

@@ -1,0 +1,5 @@
+<Link href='/'><div className='font-dance font-bold text-lg m-3 ml-7'>Hibiki_blog</div></Link>
+            
+<LoginModal />
+
+<SearchModal　/>

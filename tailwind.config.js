@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        def: ["Shippori+Mincho"],
+        jap: ["Shippori+Mincho"],
         jost: ["Jost"],
-        dance: ["Dancing Script", 'cursive'],
+        lust: ["Abril Fatface", 'cursive'],
       },
     },
   },

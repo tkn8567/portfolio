@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
-      <div className='font-def'>
+      <div className='font-def text-[#282828]'>
         <Header/>
         <Main/>
         <Footer/>

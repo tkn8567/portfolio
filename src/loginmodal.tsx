@@ -12,7 +12,7 @@ console.log("closed");
 
 return (
 <div>
-    <div className='text-white text-lg font-jost px-3 m-3 cursor-pointer' onClick={handler}>
+    <div className='text-lg font-jost text-justify cursor-pointer leading-4' onClick={handler}>
     Owner's Page
     </div>
     <Modal

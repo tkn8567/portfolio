@@ -14,21 +14,38 @@ const Main= () => {
     ];
     return (
     <>
-    <div className="pt-20"></div>
+    <div className="flex flex-col min-w-full bg-green-500 items-center m-auto">
+        <div className="h-12 w-44 bg-green-100"></div>
+        <div className="h-12 w-16 bg-green-200"></div>
+        <div className="h-12 w-56 bg-green-300"></div>
+    </div>
+    {/* <div className="flex flex-col justify-items-center">
+        <div className="max-w-4xl">
+            <div className=" bg-green-100">
+                <div className="absolute">
+                    <img className='' src='./coffee_image/img_04.jpg' alt='main_visual'/>
+                </div>
+                <div className="absolute">
+                    <div className="">asd</div>
+                </div>
+            </div>
+        </div>
+    </div> */}
+    <div className="text-4xl">洞</div>
     <div className='max-w-4xl m-auto'>
-        <div className='font-def text-white'>className='font-def' for japanese<br/>
+        <div className='font-def'>className='font-def' for japanese<br/>
             ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
             abcdefghijklmnopqrstuvwxyz<br/>
             1234567890<br/>
             あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん<br/>
         </div>
-        <div className='font-jost text-white mt-4'>className='font-jost'<br/>
+        <div className='font-jost mt-4'>className='font-jost'<br/>
             ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
             abcdefghijklmnopqrstuvwxyz<br/>
             1234567890<br/>
             あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん<br/>
         </div>
-        <div className='font-dance text-white mt-4'>className='font-dance'<br/>
+        <div className='font-dance mt-4'>className='font-dance'<br/>
             ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
             abcdefghijklmnopqrstuvwxyz<br/>
             1234567890<br/>
@@ -37,7 +54,7 @@ const Main= () => {
     </div>
     
     <div className='max-w-4xl m-auto'>
-        <div className='text-white font-thin border-b-2 w-16 sticky top-20 z-40'>Recent</div>
+        <div className='font-thin border-b-2 w-16 sticky top-20 z-40'>Recent</div>
         <div className="flex flex-wrap justify-around">
             {contents.map((content,_) => {
                 return(
@@ -64,7 +81,7 @@ const Main= () => {
     </div>
     <div className="mt-7"></div>
     <div className='max-w-4xl m-auto'>
-        <div className='text-white font-thin border-b-2 w-16 sticky top-20 z-40'>Cafe</div>
+        <div className='font-thin border-b-2 w-16 sticky top-20 z-40'>Cafe</div>
         <div className="flex flex-wrap justify-around">
             {contents.map((content,_) => {
                 return(
@@ -83,7 +100,7 @@ const Main= () => {
     </div>
     <div className="mt-7"></div>
     <div className='max-w-4xl m-auto'>
-        <div className='text-white font-thin border-b-2 w-16 sticky top-20 z-40'>Tools</div>
+        <div className='font-thin border-b-2 w-16 sticky top-20 z-40'>Tools</div>
         <div className="flex flex-wrap justify-around">
             {contents.map((content,_) => {
                 return(

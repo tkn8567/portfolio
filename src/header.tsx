@@ -3,22 +3,27 @@ import LoginModal from './loginmodal'
 import SearchModal from './searchmodal'
 const Header= () => {
     return (
-    <header className='fixed w-full z-50'>
-        <div className='backdrop-blur-lg flex flex-row items-center h-16'>
-            <Link href='/'><div className='font-dance text-white font-bold underline text-lg m-3 ml-7'>#coffee</div></Link>
-            
-            <LoginModal />
-
-            <SearchModal　/>
-            
-            <div className="border rounded w-3/12 h-8 m-3 items-center flex flex-row">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 m-1 ml-2 text-white">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-                <div className="text-white font-thin ml-2">search</div>
+    <header className=''>
+        <div className=''>
+            <div className="flex flex-row justify-between pt-4 max-w-4xl m-auto">
+                <div className="h-24 p-4 border-r-[.1rem] border-[#282828]
+                                flex justify-end items-end">
+                    <Link className='flex flex-row ' href='/'>
+                        <div className="font-lust text-[#c09b37ce] text-2xl">hibiki</div>
+                        <div className='font-lust text-2xl top-12 left-40'>.blog</div>
+                    </Link>
+                </div>
+                <div className="flex flex-row">
+                    <div className="p-5 flex justify-center items-end">
+                        <LoginModal />
+                    </div>
+                    <div className="p-1 flex justify-center items-end">
+                        <SearchModal　/>
+                    </div>
+                </div>
             </div>
-
         </div>
+        
     </header>
     
     )

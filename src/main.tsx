@@ -54,7 +54,9 @@ const Main= () => {
                     return(
                         <div className="w-[24rem] h-[34rem]" key={index}>
                             <div className='flex flex-col items-center'>
-                                <img className='object-cover w-[24rem] h-[18rem] pointer-events-none' src={content.image} alt="画像がないらしいです"/>
+                                <div className="w-[24rem] h-[18rem] bg-white">
+                                    <img className='hover:opacity-60 duration-200 object-cover w-[24rem] h-[18rem]' src={content.image} alt="画像がないらしいです"/>
+                                </div>
                                 <div className="w-[24rem] h-[16rem]">
                                     <div className="p-4">
                                         <div className="font-jost text-sm">DailyBlog</div>

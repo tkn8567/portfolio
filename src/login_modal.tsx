@@ -45,8 +45,8 @@ return (
         <Button auto flat color="error" onClick={closeHandler}>
         Close
         </Button>
-        <Button auto onClick={closeHandler}>
-            <Link href="/login"><div className='text-white'>Sign in</div></Link>
+        <Button auto>
+            <Link href="/owner"><div className='text-white'>Sign in</div></Link>
         </Button>
     </Modal.Footer>
     </Modal>

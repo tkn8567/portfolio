@@ -19,6 +19,13 @@ const Main= () => {
         {image: '/hibiki_image/hibiki_05.jpg', topic: 'コーヒーをいれよう', title: '', text: '', date: ''},
         {image: '/hibiki_image/hibiki_06.jpg', topic: 'コーヒー通販', title: '', text: '', date: ''}
     ];
+    const hashtags = [{tagname: 'DailyBlog', num: 13},{tagname: 'htregbrvsd', num: 23},{tagname: 'asgagb', num: 1},
+    {tagname: 'asd', num: 42},{tagname: 'gtbfvds', num: 102},{tagname: 'sacdvrehtnb', num: 2},{tagname: 'asdvrebhtnb', num: 13},
+    {tagname: 'スパジャポ', num: 13},{tagname: 'agdsah', num: 13},{tagname: 'arethjrnbv', num: 13},{tagname: 'sca', num: 13},
+    {tagname: 'htebrvasc', num: 13},{tagname: 'トマト銀行', num: 13},{tagname: 'asdfg', num: 13},{tagname: 'dfg', num: 13},
+    {tagname: 'コカコーラ', num: 13},{tagname: 'veranb', num: 13},{tagname: 'BDAbvsdv', num: 13},{tagname: 'dsvbsb', num: 13},
+    {tagname: 'vsbvsdfg', num: 13},{tagname: 'ascas', num: 13},{tagname: 'バレンシアガ', num: 13},{tagname: 'ascascasc', num: 13},
+    ];
     return (
     <>
     <div className="flex flex-col items-center w-screen">
@@ -47,7 +54,7 @@ const Main= () => {
                     return(
                         <div className="w-[24rem] h-[34rem]" key={index}>
                             <div className='flex flex-col items-center'>
-                                <img className='object-cover w-[24rem] h-[18rem]' src={content.image} alt=""/>
+                                <img className='object-cover w-[24rem] h-[18rem] pointer-events-none' src={content.image} alt="画像がないらしいです"/>
                                 <div className="w-[24rem] h-[16rem]">
                                     <div className="p-4">
                                         <div className="font-jost text-sm">DailyBlog</div>
@@ -65,8 +72,27 @@ const Main= () => {
                     );
                 })}
             </div>
-            <div className="w-[24rem] m-auto mt-5 font-jost border-[#282828] border-[.01rem] bg-[#282828]/5 p-3 text-center">View more →</div>
-        </div>   
+
+            <div className="flex flex-col items-center">
+                <div className="w-[24rem] m-auto mt-5 font-jost border-[#282828] border-[.01rem] bg-[#282828]/5 p-3 text-center cursor-pointer">View more →</div>
+                <div className="border-[#282828] border-[.01rem] w-[80vw] m-5"></div>
+            </div>
+
+            <div className="max-w-4xl">
+                <div className="flex flex-row flex-wrap justify-center">
+                    {hashtags.map((content, index) => {
+                        return(
+                            <div className="flex flex-row items-center m-1 p-[.1rem] border-[#282828] rounded-md font-jap bg-[#282828]/20">
+                                    #{content.tagname}
+                                    <div className="font-jost text-sm pt-[.2rem]">
+                                        ({content.num})
+                                    </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div> 
+        </div>
     </div>
     </>
     

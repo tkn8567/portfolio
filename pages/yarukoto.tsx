@@ -7,8 +7,13 @@ const Yarukoto= () => {
             <li>contact_pageフォーム</li>
             <li>policy_pageフロント</li>
             <li>search_modalマスク</li>
+            <li>search_modalショートカット</li>
             <li>owner_page管理ページmui</li>
             <li>owner_pageマークアップmui</li>
+            <li>redux</li>
+            <li>json</li>
+            <li>認証</li>
+            
 
         </ul>
         <Link href='/'>

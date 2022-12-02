@@ -17,7 +17,7 @@ const Yarukoto= () => {
 
         </ul>
         <Link href='/'>
-            <div className="bg-[#282828] p-3">back</div>
+            <div className="bg-[#282828] p-3 text-white">back</div>
         </Link>
     </div>
     

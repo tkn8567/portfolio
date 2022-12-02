@@ -1,31 +1,14 @@
+import Card_contents from './jsonfile/card_data.json';
+import Hashtags from './jsonfile/tag_data.json';
 const Main= () => {
-    const contents = [
-        {
-            image: '/hibiki_image/hibiki_01.jpg',
-            topic: 'コーヒーミル',
-            title: 'ニトリのコーヒーミルの評価「意外と使える」ニトリのコーヒーミルの評価「意外と使える」',
-            text: 'お値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリ',
-            date: '1999.4.12'
-        },
-        {
-            image: '/hibiki_image/hibiki_02.jpg',
-            topic: 'コーヒードリッパー',
-            title: 'ニトリのコーヒーミルの評価「意外と使える」ニトリのコーヒーミルの評価「意外と使える」',
-            text: 'お値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリお値段以上ニトリ',
-            date: '1999.4.12'
-        },
-        {image: '/hibiki_image/hibiki_03.jpg', topic: 'コーヒーメーカー', title: '', text: '', date: ''},
-        {image: '/hibiki_image/hibiki_04.jpg', topic: 'コーヒーカップ', title: '', text: '', date: ''},
-        {image: '/hibiki_image/hibiki_05.jpg', topic: 'コーヒーをいれよう', title: '', text: '', date: ''},
-        {image: '/hibiki_image/hibiki_06.jpg', topic: 'コーヒー通販', title: '', text: '', date: ''}
-    ];
-    const hashtags = [{tagname: 'DailyBlog', num: 13},{tagname: 'htregbrvsd', num: 23},{tagname: 'asgagb', num: 1},
-    {tagname: 'asd', num: 42},{tagname: 'gtbfvds', num: 102},{tagname: 'sacdvrehtnb', num: 2},{tagname: 'asdvrebhtnb', num: 13},
-    {tagname: 'スパジャポ', num: 13},{tagname: 'agdsah', num: 13},{tagname: 'arethjrnbv', num: 13},{tagname: 'sca', num: 13},
-    {tagname: 'htebrvasc', num: 13},{tagname: 'トマト銀行', num: 13},{tagname: 'asdfg', num: 13},{tagname: 'dfg', num: 13},
-    {tagname: 'コカコーラ', num: 13},{tagname: 'veranb', num: 13},{tagname: 'BDAbvsdv', num: 13},{tagname: 'dsvbsb', num: 13},
-    {tagname: 'vsbvsdfg', num: 13},{tagname: 'ascas', num: 13},{tagname: 'バレンシアガ', num: 13},{tagname: 'ascascasc', num: 13},
-    ];
+    const contents = Card_contents;
+    const hashtags = Hashtags;
+    contents.map((content, _) => {
+        while(content.text.length > 88){
+            content.text = content.text.slice( 0, -1 );
+        }
+    })
+    
     return (
     <>
     <div className="flex flex-col items-center w-screen">
@@ -52,19 +35,26 @@ const Main= () => {
             <div className="flex flex-wrap gap-[1.5rem] justify-center">
                 {contents.map((content, index) => {
                     return(
-                        <div className="w-[24rem] h-[34rem]" key={index}>
+                        <div className="hover:opacity-70 drop-shadow-[3px_3px_3px_rgba(0,0,0,0.25)] duration-200 w-[24rem] h-[34rem] bg-white" key={index}>
                             <div className='flex flex-col items-center'>
-                                <img className='hover:opacity-60 duration-200 object-cover w-[24rem] h-[18rem]' src={content.image} alt="画像がないらしいです"/>
+                                <img className='object-cover w-[24rem] h-[18rem]' src={content.image} alt="画像がないらしいです"/>
                                 <div className="w-[24rem] h-[16rem]">
-                                    <div className="p-4">
-                                        <div className="font-jost text-sm">DailyBlog</div>
-                                    </div>
-                                    <div className="p-6 pt-0">
-                                        <div className="text-lg leading-6 font-bold tracking-wider">{content.title}</div>
-                                    </div>
-                                    <div className="text-[.7rem] p-4 pt-0">{content.text}...</div>
-                                    <div className="text-[.5rem] text-right p-4 pt-0">{content.date}</div>
-                                    <div className='w-24 border-[.01rem] border-[#282828]'></div>
+                                    {content.text.length !== 0
+                                        ?
+                                        <>
+                                        <div className="p-4">
+                                            <div className="font-jost text-sm">DailyBlog</div>
+                                        </div>
+                                        <div className="p-6 pt-0">
+                                            <div className="text-lg leading-6 font-bold tracking-wider">{content.title}</div>
+                                        </div>
+                                        <div className="text-[.7rem] p-4 pt-0">{content.text}...</div>
+                                        <div className="text-[.5rem] text-right p-4 pt-0">{content.date}</div>
+                                        <div className='w-24 border-[.01rem] border-[#282828]'></div>
+                                        </>
+                                        :
+                                        <div className='p-4 font-jost'>Comming Soon...</div>
+                                    }
                                 </div>
                                 
                             </div>
@@ -74,7 +64,7 @@ const Main= () => {
             </div>
 
             <div className="flex flex-col items-center">
-                <div className="w-[24rem] m-auto mt-5 font-jost border-[#282828] border-[.01rem] bg-[#282828]/5 p-3 text-center cursor-pointer">View more →</div>
+                <div className="hover:bg-[#282828]/30 duration-150 w-[24rem] m-auto mt-5 font-jost border-[#282828] border-[.01rem] bg-[#282828]/5 p-3 text-center cursor-pointer">View more →</div>
                 <div className="border-[#282828] border-[.01rem] w-[80vw] m-5"></div>
             </div>
 
@@ -82,10 +72,10 @@ const Main= () => {
                 <div className="flex flex-row flex-wrap justify-center">
                     {hashtags.map((content, index) => {
                         return(
-                            <div className="flex flex-row items-center m-1 p-[.1rem] border-[#282828] rounded-md font-jap bg-[#282828]/20">
+                            <div className="flex flex-row items-center m-1 p-[.1rem] border-[#282828] rounded-md font-jap bg-[#282828]/20" key={index}>
                                     #{content.tagname}
                                     <div className="font-jost text-sm pt-[.2rem]">
-                                        ({content.num})
+                                        ({content.total})
                                     </div>
                             </div>
                         );
